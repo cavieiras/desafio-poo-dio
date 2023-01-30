@@ -20,10 +20,6 @@ public class Main {
       mentoria.setDescrição("Descrição mentoria Java");
       mentoria.setData(LocalDate.now());
 
-      // System.out.println(curso1);
-      // System.out.println(curso2);
-      // System.out.println(mentoria);
-
       Bootcamp bootcamp = new Bootcamp();
       bootcamp.setNome("Bootcamp Java Developer");
       bootcamp.setDescrição("Descrição Bootcamp Developer");
@@ -34,24 +30,60 @@ public class Main {
       Dev devCamilaS = new Dev();
       devCamilaS.setNome("Camila S");
       devCamilaS.inscreverBootcamp(bootcamp);
-      System.out.println("Conteúdos Inscritos Camila S: " + devCamilaS.getConteúdosInscritos());
+      System.out.println(bootcamp.getNome());
+      System.out.println(bootcamp.getDescrição() + "\n");
+
+      System.out.println(bootcamp.getDataInicial());
+      System.out.println(bootcamp.getDataFinal() + "\n");
+
+      System.out.println("Conteúdos Inscritos Camila S: " );
+      System.out.println(devCamilaS.getConteúdosInscritos() + "\n");
+      devCamilaS.progredir();
+      System.out.println("Conteúdos Inscritos Camila S: ");
+      System.out.println(devCamilaS.getConteúdosInscritos() + "\n");
+      System.out.println("Conteúdos Concluídos Camila S: ");
+      System.out.println(devCamilaS.getConteúdosConcluídos() + "\n");
+      devCamilaS.progredir();
+      devCamilaS.progredir();
+      System.out.println("Conteúdos Inscritos Camila S: ");
+      System.out.println(devCamilaS.getConteúdosInscritos() + "\n");
+      System.out.println("Conteúdos Concluídos Camila S: ");
+      System.out.println(devCamilaS.getConteúdosConcluídos() + "\n");
       System.out.println();
-      devCamilaS.progredir();
-      System.out.println("Conteúdos Inscritos Camila S: " + devCamilaS.getConteúdosInscritos());
-      devCamilaS.progredir();
-      System.out.println("Conteúdos Concluídos Camila S: " + devCamilaS.getConteúdosConcluídos());
-      System.out.println("XP: " + devCamilaS.calcularTotalXP());
-      System.out.println("--");
+      if (devCamilaS.getConteúdosInscritos().isEmpty()) {
+         System.out.println("Data Término: " + bootcamp.getDataTérmino());
+     };
+      System.out.println("XP: " + devCamilaS.calcularTotalXP()+ "\n");
+
+      
+      System.out.println("--------------------------------------------- \n");
 
 
       Dev devWilsonB = new Dev();
       devWilsonB.setNome("Wilson B");
       devWilsonB.inscreverBootcamp(bootcamp);
-      System.out.println("Conteúdos Inscritos Wilson B: " + devWilsonB.getConteúdosInscritos());
-      System.out.println();
+      System.out.println(bootcamp.getNome());
+      System.out.println(bootcamp.getDescrição() + "\n");
+
+      System.out.println(bootcamp.getDataInicial());
+      System.out.println(bootcamp.getDataFinal() + "\n");
+
+      System.out.println("Conteúdos Inscritos Wilson B: " );
+      System.out.println(devWilsonB.getConteúdosInscritos() + "\n");
       devWilsonB.progredir();
-      System.out.println("Conteúdos Inscritos Wilson B: " + devWilsonB.getConteúdosInscritos());
-      System.out.println("Conteúdos Concluídos Wilson B: " + devWilsonB.getConteúdosConcluídos());
+      System.out.println("Conteúdos Inscritos Wilson B: ");
+      System.out.println(devWilsonB.getConteúdosInscritos() + "\n");
+      System.out.println("Conteúdos Concluídos Wilson B: ");
+      System.out.println(devWilsonB.getConteúdosConcluídos() + "\n");
+      devWilsonB.progredir();
+      System.out.println("Conteúdos Inscritos Wilson B: ");
+      System.out.println(devWilsonB.getConteúdosInscritos() + "\n");
+      System.out.println("Conteúdos Concluídos Wilson B: ");
+      System.out.println(devWilsonB.getConteúdosConcluídos() + "\n");
+      System.out.println();
+      if (devWilsonB.getConteúdosInscritos().isEmpty()) {
+         System.out.println("Data Término: " + bootcamp.getDataTérmino());
+     };
       System.out.println("XP: " + devWilsonB.calcularTotalXP());
    } 
 }

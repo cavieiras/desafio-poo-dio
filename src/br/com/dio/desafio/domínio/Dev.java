@@ -1,5 +1,6 @@
 package br.com.dio.desafio.domínio;
 
+import java.time.LocalDate;
 import java.util.LinkedHashSet;
 import java.util.Optional;
 import java.util.Set;
@@ -20,7 +21,7 @@ public class Dev {
             this.conteúdosConcluídos.add(conteudo.get());
             this.conteúdosInscritos.remove(conteudo.get());
         } else 
-            System.err.println("Você não está matriculado em nenhuma conteúdo!");  
+            System.err.println("Você não está matriculado em nenhuma conteúdo!");        
     }
 
     public double calcularTotalXP() {
@@ -89,6 +90,8 @@ public class Dev {
             return false;
         return true;
     }
+
+
 
     
 }
